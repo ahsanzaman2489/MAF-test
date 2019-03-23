@@ -1,0 +1,255 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 800px;
+  .row {
+    margin: 0;
+  }
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.signIn {
+  border: #f6f6f6 3px solid;
+  padding: 26px 50px;
+  text-transform: capitalize;
+  padding-bottom: 40px;
+  margin-top: 67px;
+  margin-left: -6px;
+
+  .heading {
+    margin-bottom: 57px;
+    h1 {
+      color: #414141;
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 7px;
+    }
+
+    p {
+      color: #333333;
+      font-size: 14px;
+      text-align: center;
+      text-transform: none;
+      letter-spacing: 0.1px;
+    }
+  }
+
+  .input-field {
+    margin-top: 30px;
+
+    label {
+      color: #dddddd;
+      font-weight: 600;
+      font-size: 14px;
+      left: 15px;
+
+      &:not(.label-icon).active {
+        -webkit-transform: translateY(-26px) translateX(-15px) scale(1);
+        transform: translateY(-26px) translateX(-15px) scale(1);
+        color: #414141;
+        font-weight: 600;
+        font-style: italic;
+      }
+    }
+  }
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    border: #f6f6f6 1px solid;
+    height: 45px;
+    outline: none;
+    padding: 0px 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    transition: all ease-in-out 0.4s;
+
+    &:active, &:focus {
+      border-color: #05549f;
+      box-shadow: #add7ff 0px 0px 13px 0px;
+    }
+
+    & + .error {
+      background: #fff0f1;
+      position: absolute;
+      right: 3px;
+      top: -20px;
+      display: none;
+      font-size: 12px;
+      color: #f6303f;
+      text-transform: none;
+      padding: 1px 15px;
+    }
+    &.invalid {
+      border: #f6303f 1px solid;
+      box-shadow: none;
+
+      & + .error {
+        display: block
+      }
+    }
+  }
+  .remember {
+    color: #414141;
+    font-size: 12px;
+    text-transform: none;
+    padding-left: 30px;
+
+    &:before {
+      top: 3px !important;
+
+    }
+
+    &:after {
+      top: 3px !important;
+    }
+  }
+
+  .forgerPassword {
+    color: #05549f;
+    font-size: 12px;
+    text-transform: none;
+    margin: 3.5px 0;
+    display: block;
+
+    &:hover {
+      color: #414141;
+    }
+  }
+
+  button {
+    background-color: #05549f;
+    width: 100%;
+    border: none;
+    padding: 9px 0px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    border: #05549f 1px solid;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: #fff;
+      color: #05549f;
+    }
+  }
+}
+
+[type="checkbox"].filled-in:not(:checked) + label:after {
+  border: 2px solid #05549f;
+}
+
+[type="checkbox"].filled-in:checked + label:after {
+  border: 2px solid #05549f;
+  background: #05549f;
+}
+
+.productList {
+  margin-top: 70px !important;
+  border-top: #f6f6f6 1px solid;
+  padding-top: 70px;
+
+  .col.m4 {
+    width: 27.5%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    padding: 0;
+    margin-right: 8.75%;
+
+    &:last-child {
+      margin-right: 0
+    }
+  }
+  .product {
+    .thumb {
+      border: #f6f6f6 3px solid;
+      text-align: center;
+      overflow: hidden;
+      img {
+        width: 100%
+      }
+    }
+    h2 {
+      color: #414141;
+      font-size: 14px;
+      margin-bottom: 2px;
+      margin-top: 20px;
+    }
+    p {
+      color: #000000;
+      font-size: 18;
+      font-weight: 600;
+    }
+  }
+
+}
+
+.iziToast > .iziToast-body {
+  min-height: auto !important;
+  height: auto !important;
+}
+
+@media all and (max-width: 500px) {
+
+  header {
+    text-align: center;
+    #search {
+      position: static !important;
+      right: initial !important;
+      top: 40px !important;
+      width: 100% !important;
+      left: 0;
+      display: block;
+      margin-top: 20px;
+
+      input {
+        position: absolute !important;
+        right: initial !important;
+        top: 30px !important;
+        width: 80% !important;
+        display: block !important;
+        left: 0;
+      }
+    }
+  }
+
+  .signIn {
+    margin-top: 25px;
+  }
+  .productList {
+    .col.m4 {
+      width: 100%;
+      margin-right: 0;
+
+      .product {
+        margin-bottom: 20px;
+        .thumb {
+          img {
+            width: auto
+          }
+        }
+      }
+
+    }
+  }
+}

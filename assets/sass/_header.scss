@@ -1,0 +1,48 @@
+header {
+  padding-top: 30px;
+  #search {
+    background-color: #f0f7fe;
+    position: absolute;
+    right: 0px;
+    width: 50px;
+    height: 40px;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 12.5px;
+    border-radius: 5px;
+    z-index: 9;
+    transition: all ease-in-out 0.3s;
+    top: 19px;
+
+    &.active {
+      width: 200px;
+      input {
+        right: initial;
+        left: 0;
+        display: block;
+      }
+    }
+
+    .search-toggle {
+      cursor: pointer;
+      float: right;
+      margin-right: 16px;
+    }
+
+    input {
+      position: absolute;
+      right: -300px;
+      top: 10px;
+      border: none;
+      background: none;
+      transition: all ease-in-out 0.3s;
+      width: 135px;
+      padding-left: 20px;
+      padding-right: 10px;
+      outline: none;
+      color: #000000;
+      font-size: 14px;
+      display: none;
+    }
+  }
+}
